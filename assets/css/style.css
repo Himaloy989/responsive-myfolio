@@ -1,0 +1,241 @@
+/* 
+Table of content:
+~~~~~~~~~~~~~~~~~
+
+1. Nav Section
+2. Banner Section
+3. About Section
+4. Service Section
+5. MyWork Section
+6. Contact Section
+*/
+/* Common css start */
+:root{
+    --primay-color: #02918b;
+    --hover-color: #cfc91d;
+    --fonts-color: #7e8287;
+    --light-text: #ffffff;
+    --dark-text: #0b1016;
+    --primary-fonts: 'Open Sans', sans-serif;
+}
+
+body{
+    font-family: var(--primary-fonts);
+}
+.container{
+    width: 1140;
+    margin: auto;
+}
+h1,h2,h3,h4,h5,h6,
+p,
+ul,ol,
+span,
+small{
+    margin: 0;
+    padding: 0;
+}
+
+ol,ul{
+    list-style-type: none;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+.section-info{
+    text-align: center;
+}
+.section-info h2{
+    font-size:46px;
+    text-transform: capitalize;
+    font-weight: 800;
+    color: var(--primay-color);
+    text-transform: uppercase;
+    line-height: 90px;
+}
+.section-info p{
+    font-size: 16px0;
+    color: var(--fonts-color);
+    line-height: 41px;
+}
+/* Common css end */
+
+/* Nav CSS start */
+#nav{
+    background-color: var(--primay-color);
+}
+#nav #nav_menu ul li a{
+    text-transform: uppercase;
+    color: var(--light-text);
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.7s;
+    padding: 13.5px 25px;
+}
+#nav #nav_menu ul li:hover a{
+    color: var(--dark-text);
+    background-color: var(--hover-color);
+    border-radius: 10px;
+}
+/* Nav CSS end */
+/* Banner css start  */
+#banner{
+    background-image: url(../img/Banner_bg.jpg);
+    height: 728px;
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+#banner::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.68);
+    z-index: -1;
+}
+
+#banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 25px;
+}
+#banner h1{
+    font-size: 68px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 75px;
+    letter-spacing: 30px;
+}
+#banner p{
+    font-size: 18px;
+    line-height: 33px;
+}
+#banner .banner-items a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--light-text);
+    padding: 17px 42px;
+    background-color: var(--hover-color);
+    border-radius: 10px;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    transition: 0.7s;
+}
+#banner .banner-items a:hover{
+    background-color: var(--primay-color);
+    color: var(--dark-text);
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+#banner .banner-items img{
+    margin: 52px auto;
+}
+/* Banner css end  */
+/* About css start */
+#about{
+    padding: 100px 0;
+}
+#about .section-info b{
+    font-size: 23px;
+    font-weight: 800;
+}
+#about .about-items{
+    width: 25%;
+    border-right: 1px solid var(--fonts-color);
+     padding: 32px 55px 75px;
+     margin-bottom: 75px;
+}
+#about .about-items:last-child{
+    border-right: none;
+}
+#about .about-items h4{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 23px;
+    color: var(--fonts-color);
+    margin: 30px 0;
+}
+#about .about-items p{
+    font-size: 11px;
+    line-height: 21px;
+    color: var(--fonts-color);
+}
+/* About css end */
+/* Service css start */
+#service{
+    padding: 75px 0 88px 0;
+    background-image: url(../img/Service_bg-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#service .service-items{
+     padding: 32px 55px 75px;
+     margin-bottom: 75px;
+}
+#service .service-items h4{
+    color: var(--fonts-color);
+    padding: 25px 0 28px 0;
+}
+#service .service-items p{
+    font-size: 11px;
+    color: var(--fonts-color);
+    line-height: 21px;
+}
+#service .service-items{
+    width: 50%;
+    padding-right: 110px;
+    margin-bottom: 58px;
+}
+/* Service css end */
+/* MyWork css start*/
+#my-work{
+    padding-top: 110px;
+    padding-bottom: 75px;
+}
+#my-work.work-items{
+    position: relative;
+}
+#my-work.work-items .overlay{
+    position: absolute;
+}
+/* MyWork css end */
+/* Contact css start */
+#contact .contact-form{
+    background: #0a0a0b;
+}
+#contact .contact-form input,
+#contact .contact-form textarea{
+    display: block;
+    background: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--fonts-color);
+    padding: 18px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 51px;
+}
+
+
+
+#contact .contact-form #sub-btn{
+    padding: 17px 65px;
+    background-color: var(--primay-color);
+    color: var(--light-text);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: 4px;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+#contact .contact-form #sub-btn:hover{
+    background-color: var(--hover-color
+    );
+    color: var(--dark-text);
+}
+/* Contact css end */
